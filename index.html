@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prayer App</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        #map { height: 600px; }
+        #form-container { margin: 20px; }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <div id="form-container">
+        <h3>Add a Marker from Your Location</h3>
+        <form id="marker-form">
+            <label for="type">Type:</label>
+            <select id="type" name="type" required>
+                <option value="prayer">Prayer Petition</option>
+                <option value="praise">Praise Report</option>
+                <option value="thanks">Thanks Report</option>
+            </select><br>
+            <button type="button" id="add-marker-btn">Add Marker</button>
+        </form>
+    </div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
